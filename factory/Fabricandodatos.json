@@ -1,0 +1,9 @@
+{
+	"name": "Fabricandodatos",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "4e55635d-0c97-4a46-bf7d-7488c64c4461",
+		"tenantId": "2be6fd4e-2538-4455-8844-9f0eb3eb245c"
+	}
+}
