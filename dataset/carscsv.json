@@ -1,10 +1,6 @@
 {
 	"name": "carscsv",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "inputcsv1",
-			"type": "LinkedServiceReference"
-		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
