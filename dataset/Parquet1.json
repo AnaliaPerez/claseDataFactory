@@ -6,7 +6,7 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"zona": {
+			"carpeta": {
 				"type": "string"
 			},
 			"carpeta2": {
@@ -25,8 +25,14 @@
 					"value": "@concat(dataset().nombre_archivo, '_', formatDateTime(utcnow()))",
 					"type": "Expression"
 				},
-				"folderPath": "archivos_parquet",
-				"fileSystem": "datosclase"
+				"folderPath": {
+					"value": "@dataset().carpeta2",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "@dataset().carpeta",
+					"type": "Expression"
+				}
 			},
 			"compressionCodec": "snappy"
 		},
