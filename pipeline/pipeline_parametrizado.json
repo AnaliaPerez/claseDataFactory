@@ -68,7 +68,21 @@
 				"outputs": [
 					{
 						"referenceName": "Parquet1",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"carpeta": {
+								"value": "@pipeline().parameters.carpeta",
+								"type": "Expression"
+							},
+							"carpeta2": {
+								"value": "@pipeline().parameters.carpeta2",
+								"type": "Expression"
+							},
+							"nombre_archivo": {
+								"value": "@concat(pipeline().parameters.nombre_archivo, '_', formatDateTime(utcNow()))",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			},
