@@ -1,0 +1,135 @@
+{
+	"name": "datosMS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "clasedfactorydatos",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"zona": {
+				"type": "string"
+			},
+			"carpeta": {
+				"type": "string"
+			},
+			"nombre_archivo": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "@dataset().nombre_archivo",
+				"folderPath": {
+					"value": "@concat(dataset().zona, '/', dataset().carpeta)",
+					"type": "Expression"
+				},
+				"fileSystem": "datosclase"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "case",
+				"type": "String"
+			},
+			{
+				"name": "location1",
+				"type": "String"
+			},
+			{
+				"name": "date",
+				"type": "String"
+			},
+			{
+				"name": "summary",
+				"type": "String"
+			},
+			{
+				"name": "fatalities",
+				"type": "String"
+			},
+			{
+				"name": "injured",
+				"type": "String"
+			},
+			{
+				"name": "total_victims",
+				"type": "String"
+			},
+			{
+				"name": "location7",
+				"type": "String"
+			},
+			{
+				"name": "age_of_shooter",
+				"type": "String"
+			},
+			{
+				"name": "prior_signs_mental_health_issues",
+				"type": "String"
+			},
+			{
+				"name": "mental_health_details",
+				"type": "String"
+			},
+			{
+				"name": "weapons_obtained_legally",
+				"type": "String"
+			},
+			{
+				"name": "where_obtained",
+				"type": "String"
+			},
+			{
+				"name": "weapon_type",
+				"type": "String"
+			},
+			{
+				"name": "weapon_details",
+				"type": "String"
+			},
+			{
+				"name": "race",
+				"type": "String"
+			},
+			{
+				"name": "gender",
+				"type": "String"
+			},
+			{
+				"name": "sources",
+				"type": "String"
+			},
+			{
+				"name": "mental_health_sources",
+				"type": "String"
+			},
+			{
+				"name": "sources_additional_age",
+				"type": "String"
+			},
+			{
+				"name": "latitude",
+				"type": "String"
+			},
+			{
+				"name": "longitude",
+				"type": "String"
+			},
+			{
+				"name": "type",
+				"type": "String"
+			},
+			{
+				"name": "year",
+				"type": "String"
+			}
+		]
+	}
+}
