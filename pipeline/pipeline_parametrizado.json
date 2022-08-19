@@ -48,10 +48,10 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "datosMS",
+						"referenceName": "datos_origen",
 						"type": "DatasetReference",
 						"parameters": {
-							"zona": {
+							"carpeta": {
 								"value": "@pipeline().parameters.zona",
 								"type": "Expression"
 							},
@@ -96,7 +96,7 @@
 			}
 		],
 		"parameters": {
-			"zona": {
+			"carpeta": {
 				"type": "string",
 				"defaultValue": "datosclase"
 			},
@@ -106,7 +106,7 @@
 			},
 			"nombre_archivo": {
 				"type": "string",
-				"defaultValue": "mass-shootings-database-2002"
+				"defaultValue": "datosMS"
 			},
 			"carpeta2": {
 				"type": "string",

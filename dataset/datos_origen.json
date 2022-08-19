@@ -1,12 +1,12 @@
 {
-	"name": "datosMS",
+	"name": "datos_origen",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "clasedfactorydatos",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"zona": {
+			"carpeta": {
 				"type": "string"
 			},
 			"carpeta1": {
@@ -21,9 +21,18 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "@dataset().nombre_archivo",
-				"folderPath": "@concat(dataset().zona, '/', dataset().carpeta1)",
-				"fileSystem": "datosclase"
+				"fileName": {
+					"value": "@dataset().nombre_archivo",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().carpeta1",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "@dataset().carpeta",
+					"type": "Expression"
+				}
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
