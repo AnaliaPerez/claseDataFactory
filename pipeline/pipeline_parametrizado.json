@@ -48,7 +48,21 @@
 				"inputs": [
 					{
 						"referenceName": "datosMS",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"zona": {
+								"value": "@pipeline().parameters.zona",
+								"type": "Expression"
+							},
+							"carpeta1": {
+								"value": "@pipeline().parameters.carpeta1",
+								"type": "Expression"
+							},
+							"nombre_archivo": {
+								"value": "@pipeline().parameters.nombre_archivo",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"outputs": [
@@ -62,7 +76,7 @@
 		"parameters": {
 			"zona": {
 				"type": "string",
-				"defaultValue": "datosclase"
+				"defaultValue": "clasedfactory/datosclase"
 			},
 			"carpeta1": {
 				"type": "string",

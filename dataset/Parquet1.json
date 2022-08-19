@@ -9,7 +9,7 @@
 			"zona": {
 				"type": "string"
 			},
-			"carpeta": {
+			"carpeta2": {
 				"type": "string"
 			},
 			"nombre_archivo": {
