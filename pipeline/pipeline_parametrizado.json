@@ -72,6 +72,27 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "mail-success",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"url": " https://prod-21.centralus.logic.azure.com:443/workflows/be4c86d5faa64cc2aa27dc9c689163e0/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=ZUvI2FxB2dxNSuWLI-i6vbmknr2zYqJp_wTtwUflr0A",
+					"method": "POST",
+					"body": {
+						"value": "{\n    \"title\": \"\",\n    \"message\": \"\",\n    \"color\": \"GREEN\",\n    \"dataFactoryName\": \"@{pipeline().DataFactory}\",\n    \"pipelineName\": \"@{pipeline().Pipeline}\",\n    \"pipelineRunId\": \"@{pipeline().RunId}\",\n    \"time\": \"@{utcNow()}\"\n}",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"parameters": {
