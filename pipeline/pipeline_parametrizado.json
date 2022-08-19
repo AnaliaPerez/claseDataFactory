@@ -84,7 +84,7 @@
 			},
 			"nombre_archivo": {
 				"type": "string",
-				"defaultValue": "mass_shootings"
+				"defaultValue": "mass-shootings-database-2002"
 			},
 			"carpeta2": {
 				"type": "string",
