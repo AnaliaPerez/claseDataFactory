@@ -22,10 +22,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": "@dataset().nombre_archivo",
-				"folderPath": {
-					"value": "@concat(dataset().zona, '/', dataset().carpeta1)",
-					"type": "Expression"
-				},
+				"folderPath": "@concat(dataset().zona, '/', dataset().carpeta1)",
 				"fileSystem": "datosclase"
 			},
 			"columnDelimiter": ",",

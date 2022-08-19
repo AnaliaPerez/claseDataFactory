@@ -77,7 +77,7 @@
 		"parameters": {
 			"zona": {
 				"type": "string",
-				"defaultValue": "clasedfactory/datosclase"
+				"defaultValue": "datosclase"
 			},
 			"carpeta1": {
 				"type": "string",
@@ -90,6 +90,10 @@
 			"carpeta2": {
 				"type": "string",
 				"defaultValue": "archivos_parquet"
+			},
+			"cuenta_almacenamiento": {
+				"type": "string",
+				"defaultValue": "clasedfactory"
 			}
 		},
 		"annotations": []
