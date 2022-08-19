@@ -20,7 +20,6 @@
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
-							"wildcardFileName": "*.csv",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
@@ -52,7 +51,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"carpeta": {
-								"value": "@pipeline().parameters.zona",
+								"value": "@pipeline().parameters.carpeta",
 								"type": "Expression"
 							},
 							"carpeta1": {
@@ -76,7 +75,14 @@
 			{
 				"name": "mail-success",
 				"type": "WebActivity",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "carga-datos-csv",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
