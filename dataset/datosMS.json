@@ -9,7 +9,7 @@
 			"zona": {
 				"type": "string"
 			},
-			"carpeta": {
+			"carpeta1": {
 				"type": "string"
 			},
 			"nombre_archivo": {
@@ -23,7 +23,7 @@
 				"type": "AzureBlobFSLocation",
 				"fileName": "@dataset().nombre_archivo",
 				"folderPath": {
-					"value": "@concat(dataset().zona, '/', dataset().carpeta)",
+					"value": "@concat(dataset().zona, '/', dataset().carpeta1)",
 					"type": "Expression"
 				},
 				"fileSystem": "datosclase"
