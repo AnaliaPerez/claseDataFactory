@@ -61,13 +61,20 @@
 		],
 		"parameters": {
 			"zona": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "datosclase"
 			},
-			"carpeta": {
-				"type": "string"
+			"carpeta1": {
+				"type": "string",
+				"defaultValue": "datos22"
 			},
 			"nombre_archivo": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "mass_shootings"
+			},
+			"carpeta2": {
+				"type": "string",
+				"defaultValue": "archivos_parquet"
 			}
 		},
 		"annotations": []
