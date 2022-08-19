@@ -1,0 +1,41 @@
+{
+	"name": "Parquet2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "clasedfactorydatos",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"carpeta": {
+				"type": "string"
+			},
+			"carpeta2": {
+				"type": "string"
+			},
+			"nombre_archivo2": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "nombre_archivo2",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "carpeta2",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "carpeta",
+					"type": "Expression"
+				}
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}

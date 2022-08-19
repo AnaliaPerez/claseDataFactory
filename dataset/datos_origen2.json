@@ -1,0 +1,43 @@
+{
+	"name": "datos_origen2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "clasedfactorydatos",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"carpeta": {
+				"type": "string"
+			},
+			"carpeta1": {
+				"type": "string"
+			},
+			"nombre_archivo2": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "nombre_archivo2",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "carpeta1",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "carpeta",
+					"type": "Expression"
+				}
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
